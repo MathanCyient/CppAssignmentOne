@@ -1,13 +1,34 @@
+
 #include "memfun.hpp"
+#define acctime 5;
+#define brktime 5;
  
  int main()
  { 
-    Car first;
-	first.initdata();
-	first.display();
+ string select;
+ int counta=acctime;
+ int countb=brktime;
+ do{
+    Car car1;
+	car1.initdata();
+	car1.display();
 	
-	first.accelerate();
-	first.brake();
+	while(counta!=0)
+	{
+	car1.accelerate();
+	counta = counta-1;
+	}
+	
+    while(countb!=0)
+	{
+	car1.brake();
+	countb =countb-1;
+	}
+
+	cout<<"Do you want to continue y/n?"<<endl;
+	cin>>select;
+	
+ }while(select!="n");
 	
     return 0;
  }
