@@ -2,8 +2,6 @@
 #include <iostream>
 #define speedConstant 10;
 #define brakeConstant 10;
-
-
 using namespace std;
 
 class Car
@@ -16,31 +14,29 @@ private:
  public:
   void initdata()
   {
-	  int rlseyear;
+      int rlseyear;
       string customername;
       int spd;
 	  
-	  cout<<"Enter the customer name"<<endl;
-	  cin>>customername;
-	  
-	  cout<<"Enter the Release year"<<endl;
-	  cin>>rlseyear;
-	  
-	  cout<<"Enter the speed"<<endl;
-	  cin>>spd;
+       cout<<"Enter the customer name"<<endl;
+       cin>>customername; 
+       cout<<"Enter the Release year"<<endl;
+       cin>>rlseyear;
+       cout<<"Enter the speed"<<endl;
+       cin>>spd;
      
-      releaseyear=rlseyear;
-      customer=customername;
-      speed=spd;
+       releaseyear=rlseyear;
+       customer=customername;
+       speed=spd;
 	  
 	
    }
   
-   void display()
+   void displayspeed()
    {  
       cout<<endl<<"Displaying the details of car"<<endl;
       cout<<endl<<" Customer is "<<customer<<endl;
-	  cout<<endl<<" Release year is "<<releaseyear<<endl;
+      cout<<endl<<" Release year is "<<releaseyear<<endl;
   
       if (speed > 0)
 	   cout<<endl<<"speed is "<<speed<<"kmph"<<endl;
