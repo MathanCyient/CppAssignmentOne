@@ -1,4 +1,3 @@
-
 #include "memfun.hpp"
 #define acctime 5;
 #define brktime 5;
@@ -9,7 +8,7 @@
  int counta=acctime;
  int countb=brktime;
  do{
-    Car car1;
+	Car car1;
 	car1.initdata();
 	car1.display();
 	
@@ -19,7 +18,7 @@
 	counta = counta-1;
 	}
 	
-    while(countb!=0)
+        while(countb!=0)
 	{
 	car1.brake();
 	countb =countb-1;
