@@ -1,6 +1,8 @@
 #include <string>
 #include <iostream>
-#define speedCOnstant 10;
+#define speedConstant 10;
+#define brakeConstant 10;
+
 
 using namespace std;
 
@@ -26,21 +28,20 @@ private:
 	  
 	  cout<<"Enter the speed"<<endl;
 	  cin>>spd;
+     
       releaseyear=rlseyear;
       customer=customername;
       speed=spd;
 	  
-	  cout<<endl<<"Displaying the details of car"<<endl;
-      cout<<" Customer is "<<customer<<endl;
-	  cout<<" Release year is "<<releaseyear<<endl;
-      cout<<" speed is "<<speed<<"kmph"<<endl;
+	
    }
   
    void display()
    {  
-     // cout<<endl<<"Displaying the details of car"<<endl;
-     // cout<<" Customer is "<<customer<<endl;
-	 // cout<<" Release year is "<<releaseyear<<endl;
+      cout<<endl<<"Displaying the details of car"<<endl;
+      cout<<endl<<" Customer is "<<customer<<endl;
+	  cout<<endl<<" Release year is "<<releaseyear<<endl;
+  
       if (speed > 0)
 	   cout<<endl<<"speed is "<<speed<<"kmph"<<endl;
       else
@@ -49,14 +50,14 @@ private:
   
   void accelerate()
    {
-	  speed = speed+speedCOnstant;
+	  speed = speed+speedConstant;
 	  cout<<endl<<"speed accelerated"<<endl;
 	  display();
    }
   
   void brake()
    {
-	  speed = speed-speedCOnstant;
+	  speed = speed-brakeConstant;
 	  cout<<endl<<"Brake applied"<<endl;
 	  display();
    }
